@@ -1,0 +1,79 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.wrappere{
+    height: 100vh;
+    overflow-x:hidden ;
+    overflow-y: auto;
+}
+.container{
+    height: 100%;
+    max-width: 3500px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.container h1{
+    text-align: center;
+    margin: 20px 0px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.gallary{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.card{
+    width: 19%;
+    /* height: 100%; */
+    position:relative;
+    border-radius: 10px;
+    margin-bottom :10px; 
+    overflow: hidden;
+
+}
+.card img{
+    height: 100%;
+    width: 100%;
+    filter: grayscale(100%);
+    box-shadow: 0 0 10px #333;
+    object-fit:cover ;
+
+}
+.card:hover{
+    transform: scale(2.05);
+    transition: 0.3s;
+    filter: drop-shadow(0 0 20px #333);
+    z-index: 2;
+}
+.card:hover img{
+    filter: grayscale(0%);
+}
+.card figcaption{
+   
+    position:absolute ;
+   bottom: 100%;
+    padding: 15px;
+    width: 100%;
+    height: 10%;
+    font-size: 10px;
+    font-style: normal;
+    letter-spacing: 3px;
+    list-style-type: upper-alpha;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    opacity:0;
+    /* border-radius: 0 0 10px 10px; */
+    /* background:linear-gradient(0deg rgba(0 ,0, 0, 0.5) ,rgba(255, 255 ,255 ,0)100%); */
+    transition: 0.3s;
+   
+}
+.card:hover figcaption{
+        opacity:1 ;
+        transition: scale(1.03);
+        color: chocolate;font-size: 25px;
+            /* font-size: 25px; */
+}
